@@ -1,9 +1,10 @@
 /* @flow */
 
 import React from 'react';
-import { Linking, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Alert, Linking, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { BarCodeScanner } from 'expo';
 import { throttle } from 'lodash';
+import store from '../store';
 
 import Layout from '../constants/Layout';
 
@@ -76,7 +77,7 @@ export default class BarCodeScreen extends React.Component {
       if (this._isMounted) {
         let isUrl = false;
         if(isUrl) this._openUrl(url);
-        else _desbloquearPista(url);
+        else this._desbloquearPista(url);
       }
     });
   }, 1000);
@@ -94,6 +95,22 @@ export default class BarCodeScreen extends React.Component {
   };
 
   _desbloquearPista = (codigo: string) => {
+    //?
+    if(codigo == "pista1") {
+      Alert.alert(
+        'Encuentra las columnas romanas ...'
+     )
+    }
+    else {
+      Alert.alert(
+        codigo
+     )
+    }
+
+    store.dispatch({
+      type: 'CLUE_1',
+      clue1: true
+    })
     
   }
 

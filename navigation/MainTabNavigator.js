@@ -4,7 +4,7 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
+import CluesScreen from '../screens/CluesScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import QRCodeScreen from '../screens/QRCodeScreen';
 import Pista1Screen from '../screens/Pista1Screen';
@@ -29,7 +29,7 @@ HomeStack.navigationOptions = {
 };
 
 const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+  Links: CluesScreen,
   QRCode: QRCodeScreen,
   Pista1: Pista1Screen,
 });

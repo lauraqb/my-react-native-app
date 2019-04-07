@@ -7,7 +7,7 @@ import { withNavigation } from 'react-navigation';
 import TouchableNativeFeedbackSafe from '@expo/react-native-touchable-native-feedback-safe';
 
 import Colors from '../constants/Colors';
-import { BarCodeScanner, Permissions } from 'expo';
+import { Permissions } from 'expo';
 //import requestCameraPermissionsAsync from '../utils/requestCameraPermissionsAsync';
 
 @withNavigation

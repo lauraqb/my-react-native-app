@@ -12,7 +12,6 @@ import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
 import QRCodeButton from '../components/QRCodeButton'; /**lau */
-//import QRCodeButton from './QRCodeButton';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -32,7 +31,7 @@ export default class HomeScreen extends React.Component {
                 __DEV__
                 ? require('../assets/images/espadas.png')
                   //? require('../assets/images/robot-dev.png')
-                  : require('../assets/images/robot-prod.png')
+                  : require('../assets/images/espadas.png')
               }
               style={styles.welcomeImage}
             />
@@ -63,7 +62,7 @@ export default class HomeScreen extends React.Component {
 
           <View style={styles.helpContainer}>
             <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>
-              <Text style={styles.helpLinkText}>Ayuda, estamos atascados!</Text>
+              <Text style={styles.helpLinkText}>Ayuda, ¡estamos atascados!</Text>
             </TouchableOpacity>
           </View>
         </ScrollView>
